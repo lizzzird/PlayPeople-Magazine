@@ -1,0 +1,22 @@
+﻿@page
+@model PlayPeople.Pages.UserModel
+@{
+} 
+
+<h2 class="text-xenter">Добро пожаловать в аккаунт</h2>
+
+<div>
+	Имя: @Model.appUser?.FirstName
+</div>
+<div>
+	Фамилия: @Model.appUser?.LastName
+</div>
+<div>
+	Email: @Model.appUser?.Email
+</div>
+<div>
+	Номер телефона: @Model.appUser?.PhoneNumber
+</div>
+<div>
+	Дата создания учётной записи: @Model.appUser?.CreatedAt.ToString("dd/MM/yyyy")
+</div>

@@ -1,0 +1,44 @@
+﻿@page
+@model PlayPeople.Pages.Editor.Games.IndexModel
+@{
+}
+<h2 class="text-center mb-5">Список игр</h2>
+
+<div class="row mb-5">
+	<div class="col">
+		<a class='btn-primary' href='/Editor/Games/Create'>Добавить игру</a>
+	</div>
+	<div class="col">
+	</div>
+</div>
+
+<table class="table">
+	<tr>
+		<th>ID</th>
+		<th>Название</th>
+		<th>Разработчик</th>
+		<th>Жанр</th>
+		<th>Описание</th>
+		<th>Дата выхода</th>
+		<th>Платформы</th>
+		<th>Изображение</th>
+		<th>Действие</th>
+	</tr>
+	@foreach (var game in Model.Games)
+	{
+		<tr>
+			<td>@game.Id</td>
+			<td>@game.Title</td>
+			<td>@game.Developer</td>
+			<td>@game.Genre</td>
+			<td>@game.Description</td>
+			<td>@game.ReleaseDate.ToString("dd/MM/yyyy")</td>
+			<td>@game.Platforms</td>
+			<td><img src="/games/@game.ImageFileName" width="100" /></td>
+			<td style="white-space:nowrap">
+				<a class="btn btn-primary btn-sm" href="/Editor/Games/Edit?id=@game.Id">Редактировать</a>
+				<a class="btn btn-danger btn-sm" href="/Editor/Games/Delete?id=@game.Id">Удалить</a>
+			</td>
+		</tr>
+	}
+</table>

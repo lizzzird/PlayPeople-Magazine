@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Маша\\PlayPeople\\PlayPeople\\PlayPeople\\wwwroot\\games\\20240508210329221.jpg",
+      "PackagePath": "staticwebassets\\games\\20240508210329221.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Маша\\PlayPeople\\PlayPeople\\PlayPeople\\wwwroot\\games\\20240508212858862.jpg",
+      "PackagePath": "staticwebassets\\games\\20240508212858862.jpg"
+    },
+    {
       "Id": "C:\\Users\\Маша\\PlayPeople\\PlayPeople\\PlayPeople\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

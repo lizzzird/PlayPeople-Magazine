@@ -1,0 +1,116 @@
+﻿@page
+@model PlayPeople.Pages.Editor.Games.EditModel
+@{
+}
+
+<div class="row">
+	<div class="col-md-8 mx-auto rounded border p-3">
+		<h2 class="text-center mb-5">Редактировать игру</h2>
+
+		@if (Model.errorMessage.Length > 0)
+		{
+			<div class='alert alert-warning alert-dismissible fade show' role='alert'>
+				<strong>@Model.errorMessage</strong>
+				<button type='button' class='btn-close' sata-bs-dismiss='alert' aria-label='Закрыть'></button>
+			</div>
+		}
+		else if (Model.successMessage.Length > 0)
+		{
+			<div class='alert alert-success alert-dismissible fade show' role='alert'>
+				<strong>@Model.successMessage</strong>
+				<button type='button' class='btn-close' sata-bs-dismiss='alert' aria-label='Закрыть'></button>
+			</div>
+		}
+
+
+
+		<form method="post" enctype="multipart/form-data">
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-label">ID</label>
+				<div class="col-sm-8">
+					<input readonly class="form-control-plaintext" value="@Model.Game.Id">
+				</div>
+			</div>
+			
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-label">Название</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="GameDto.Title">
+					<span asp-validation-for="GameDto.Title" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-label">Разработчик</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="GameDto.Developer">
+					<span asp-validation-for="GameDto.Developer" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-label">Жанр</label>
+				<div class="col-sm-8">
+					<select class="form-select" asp-for="GameDto.Genre">
+						<option value='Другое'>Другое</option>
+						<option value='Экшн'>Экшн</option>
+						<option value='Приключение'>Приключение</option>
+						<option value='Симулятор'>Симулятор</option>
+						<option value='Головоломка'>Головоломка</option>
+						<option value='Стратегия'>Стратегия</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-label">Описание</label>
+				<div class="col-sm-8">
+					<textarea class="form-control" asp-for="GameDto.Description"></textarea>
+					<span asp-validation-for="GameDto.Description" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-label">Дата выхода</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="GameDto.ReleaseDate">
+					<span asp-validation-for="GameDto.ReleaseDate" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-label">Платформы</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="GameDto.Platforms">
+					<span asp-validation-for="GameDto.Platforms" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-label"></label>
+				<div class="col-sm-8">
+					<img src="/games/@Model.Game.ImageFileName" width="150"/>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-label">Изображение</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="GameDto.ImageFile">
+					<span asp-validation-for="GameDto.ImageFile" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<div class="offset-sm-4 col-sm-4 d-grid">
+					<button type="submit" class="btn btn-primary">Добавить</button>
+				</div>
+				<div class="col-sm-4 d-grid">
+					<a class="btn btn-outline-primary" href="/Editor/Games/Index" role="button">Отмена</a>
+				</div>
+			</div>
+
+
+		</form>
+	</div>
+</div>
