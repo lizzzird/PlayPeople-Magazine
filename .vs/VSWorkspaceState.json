@@ -1,4 +1,11 @@
 {
-  "ExpandedNodes": [],
+  "ExpandedNodes": [
+    "",
+    "\\PlayPeople",
+    "\\PlayPeople\\PlayPeople",
+    "\\PlayPeople\\PlayPeople\\Pages",
+    "\\PlayPeople\\PlayPeople\\Pages\\Shared"
+  ],
+  "SelectedNode": "\\PlayPeople\\PlayPeople.sln",
   "PreviewInSolutionExplorer": false
 }

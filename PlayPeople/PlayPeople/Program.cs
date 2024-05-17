@@ -41,7 +41,44 @@ namespace PlayPeople
 
             app.UseAuthorization();
 
-            app.MapRazorPages();
+            app.MapControllerRoute(
+                name: "default",
+                pattern: "{controller=Home}/{action=Games}");
+
+            app.MapControllerRoute(
+                name: "games",
+                pattern: "games",
+                defaults: new { controller = "Home", action = "Games" });
+
+            app.MapControllerRoute(
+                name: "news",
+                pattern: "news",
+                defaults: new { controller = "Home", action = "News" });
+
+            app.MapControllerRoute(
+                name: "read",
+                pattern: "read",
+                defaults: new { controller = "Home", action = "Read" });
+
+            app.MapControllerRoute(
+                name: "releases",
+                pattern: "releases",
+                defaults: new { controller = "Home", action = "Releases" });
+
+            app.MapControllerRoute(
+                name: "support",
+                pattern: "support",
+                defaults: new { controller = "Home", action = "Support" });
+
+            app.MapControllerRoute(
+                name: "login",
+                pattern: "login",
+                defaults: new { controller = "Home", action = "Login" });
+
+             app.MapControllerRoute(
+                name: "register",
+                pattern: "register",
+                defaults: new { controller = "Home", action = "Register" });
 
             app.Run();
         }

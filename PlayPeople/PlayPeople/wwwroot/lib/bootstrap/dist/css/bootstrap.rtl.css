@@ -5519,7 +5519,7 @@ textarea.form-control-lg {
   align-items: center;
   justify-content: flex-end;
   padding: 0.75rem;
-  border-top: 1px solid #dee2e6;
+  border-top: 1px solid #000;
   border-bottom-left-radius: calc(0.3rem - 1px);
   border-bottom-right-radius: calc(0.3rem - 1px);
 }
@@ -6772,7 +6772,7 @@ textarea.form-control-lg {
 }
 
 .border-top {
-  border-top: 1px solid #dee2e6 !important;
+  border-top: 1px solid #000 !important;
 }
 
 .border-top-0 {

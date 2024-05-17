@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PlayPeople")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6201bcae28fe10c25ec96f7dcf72a500c9610ad1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("PlayPeople")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PlayPeople")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
